@@ -1,0 +1,1 @@
+draw_text(x-5,y-30,hp);
