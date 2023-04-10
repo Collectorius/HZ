@@ -7,7 +7,7 @@ enemyCorLine = ds_queue_create();
 
 globalvar courierLine;
 globalvar courierLineNum;
-courierLine = [0];
+courierLine = [];
 courierLineNum = 0;
 
 globalvar gadd;

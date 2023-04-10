@@ -1,4 +1,4 @@
-if(hp > 0){
+
 	keyRight = keyboard_check(ord("D"));
 	keyLeft = -keyboard_check(ord("A"));
 	keyUp = -keyboard_check(ord("W"));
@@ -68,7 +68,3 @@ if(hp > 0){
 
 	x += hsp;
 	y += vsp;
-}
-else{
-	instance_destroy();	
-}
