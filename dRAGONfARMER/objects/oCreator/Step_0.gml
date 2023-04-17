@@ -1,5 +1,5 @@
 if(gadd == 4){
-	oAltar.add = 0;
+	oCourierAltar.add = 0;
 	gadd = 0;
 	instance_destroy(oEnCo);
 	courierLineNum++;

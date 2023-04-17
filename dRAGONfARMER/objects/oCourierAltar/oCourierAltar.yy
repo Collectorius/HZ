@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "oAltar",
+  "name": "oCourierAltar",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"oEnCo","path":"objects/oEnCo/oEnCo.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "sAltar",
-    "path": "sprites/sAltar/sAltar.yy",
+    "name": "sCourierAltar",
+    "path": "sprites/sCourierAltar/sCourierAltar.yy",
   },
   "spriteMaskId": null,
   "visible": true,
