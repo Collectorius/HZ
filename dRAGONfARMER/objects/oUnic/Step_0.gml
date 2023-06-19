@@ -9,21 +9,29 @@
 
 	hsp = hMove * moveSpeed;
 	vsp = vMove * moveSpeed;
+	
+	coef = 5;
+	hspadd = sign(hsp) * coef;
+	vspadd = sign(vsp) * coef;
 
+	old = image_angle;
 	image_angle = point_direction(x,y,mouse_x,mouse_y);
+	if(place_meeting(x, y, oWall)){
+		image_angle = old;
+	}
 
-	if(place_meeting(x+hsp,y,oWall))
+	if(place_meeting(x+hsp+hspadd,y,oWall))
 	{
-		while(!place_meeting(x+sign(hsp),y,oWall))
+		while(!place_meeting(x+sign(hsp)+hspadd,y,oWall))
 		{
 			x += sign(hsp);
 		}
 		hsp = 0;
 	}
 
-	if(place_meeting(x,y+vsp,oWall))
+	if(place_meeting(x,y+vsp+vspadd,oWall))
 	{
-		while(!place_meeting(x,y+sign(vsp),oWall))
+		while(!place_meeting(x,y+sign(vsp)+vspadd,oWall))
 		{
 			y += sign(vsp);
 		}
