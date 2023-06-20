@@ -1,3 +1,4 @@
+	dt = delta_time / 1000000;
 
 	keyRight = keyboard_check(ord("D"));
 	keyLeft = -keyboard_check(ord("A"));
@@ -15,9 +16,24 @@
 	vspadd = sign(vsp) * coef;
 
 	old = image_angle;
-	image_angle = point_direction(x,y,mouse_x,mouse_y);
-	if(place_meeting(x, y, oWall)){
-		image_angle = old;
+	angle = point_direction(x,y,mouse_x,mouse_y) - old;
+	if(abs(angle) > 0){
+		show_debug_message("Angle: {0}", image_angle);
+		
+		t = lerp(0, angle, 0.175);
+		if(image_angle + t >= 360){
+			image_angle -= 360;
+		}
+		else if(image_angle + t < 0){
+			image_angle += 360;	
+		}
+		else{
+			image_angle += t;	
+		}
+		
+		if(place_meeting(x, y, oWall)){
+			image_angle = old;
+		}
 	}
 
 	if(place_meeting(x+hsp+hspadd,y,oWall))
